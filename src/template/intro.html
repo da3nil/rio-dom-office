@@ -1,0 +1,110 @@
+<input id="cityCore" type="hidden" name="city" class="city" value="Москва и МО">
+
+<style>
+    .intro__item {
+        color: white;
+    }
+
+    .intro__center a:hover {
+        text-decoration: none !important;
+        text-transform: none !important;
+        color: #ffd227 !important;
+        transition: color 0.5s;
+    }
+
+    .intro__center a:hover .intro__item{
+        color: #ffd227 !important;
+        transition: color 0.5s;
+    }
+</style>
+
+<section class="intro">
+    <div class="intro__container text-center text-white">
+<!--        <h1 class="intro__header text-orange-lg text-white text-center w-100">Интро <br> (Жду макет)</h1>-->
+        <div class="intro__head">
+<!--        <div class="intro__head position-fixed sticky-top" style="padding-top: 15px;padding-bottom: 9px;width: 100%;background-color: rgba(0,0,0,0.7);">-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 col">
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="logo mb-md-3 mb-lg-0 p-3 pt-3 p-md-0">
+                                    <img style="position: relative;top: 0.6rem;" class="img-fluid" src="img/logo-white.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg pt-3 pb-3 pt-lg-0 pb-lg-0 d-flex justify-content-center text-center">
+                                <div class="intro__city-container">
+                                    <div style="cursor: pointer" data-toggle="modal" data-target="#cityModal" class="intro__city-head text-center">
+                                        <img src="img/map-marker-alt-solid.svg" alt="" style="height: 16px; width: auto; position: relative; top: -2px">
+                                        <span id="intro__city-data">Москва и МО</span>
+                                    </div>
+                                    <div data-toggle="modal" data-target="#cityModal" class="intro__city-bottom text-center" style="cursor: pointer; font-size: calc(16px + 0.1vw); text-decoration: underline">
+                                        Выбрать другой
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg d-none d-lg-block text-decoration-none">
+                                <a href="#calc" class="intro__calc flowing-scroll" data-scroll=".calc" style="white-space: nowrap">
+                                    <img class="intro__calc-img" src="img/calc-white.png" alt="">
+                                    <span class="intro__calc-text text-decoration-none">Калькулятор</span>
+                                </a>
+                            </div>
+                            <div class="col-lg d-none d-lg-block">
+                                Задайте вопрос напрямую в :
+                                <a target="_blank" href="http://t.me/RIODOM">
+                                    <img class="intro__messenger" src="img/intro__telegram.png" alt="">
+                                </a>
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=79270809042">
+                                    <img class="intro__messenger" src="img/intro__whatsapp.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-lg d-none d-lg-block text-right">
+                                <div class="pr-3">
+                                    <div class="intro__phone position-relative"><a class="text-decoration-none text-white" href="tel:+78005509042">8 (800) 550 90-42</a> <img class="intro__phone-indicator" src="img/intro__phone-i.png" alt=""></div>
+                                    <div>Бесплатный звонок</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro__center">
+<!--            <img class="img-fluid" src="img/joke.png" alt="">-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 mt-3 mt-md-0 col-6 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                <div class="intro__item">
+                                    СОВРЕМЕННЫЙ <br> РЕМОНТ <br> КВАРТИР
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 order-first order-md-1 position-relative">
+                                <div class="pulse-container pulse" style="pointer-events: none"></div>
+                                <div class="intro__title-top">СОВРЕМЕННЫЙ</div>
+                                <div class="intro__title position-relative">
+                                    <div>РЕМОНТ</div>
+                                    <div class="intro__light"></div>
+                                    <div class="intro__text-min">КОММЕРЧЕСКОЙ</div>
+                                    <div class="intro__text-min">НЕДВИЖИМОСТИ</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mt-3 mt-md-0 order-last col-6 d-flex align-items-center justify-content-center justify-content-lg-start">
+                                <a href="https://rio-dom.ru/balcony">
+                                    <div class="intro__item text-decoration-none">
+                                        УТЕПЛЕНИЕ <br>ЛОДЖИИ И <br>БАЛКОНОВ
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="intro__btn-container">
+                            <button class="intro__btn" data-toggle="modal" data-target="#exampleModal">НАШИ ЦЕНЫ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

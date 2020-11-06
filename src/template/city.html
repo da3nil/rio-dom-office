@@ -1,0 +1,78 @@
+<div class="modal fade bd-example-modal-lg" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 2rem; outline: none; padding-right: 2rem; padding-top: 20px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="city__header">
+                <div class="modal-title position-relative">
+                    <label class="d-block city__title text-left text-md-center" for="city__input-text">Выберите регион <span class="d-none d-md-inline">или город</span></label>
+                </div>
+                <div class="city__input-group justify-content-start justify-content-md-between position-relative">
+                    <input value="Москва и МО" name="city" id="city__input-text" class="city__input-text" type="text" placeholder="Выберите регион или город" autocomplete="off">
+                    <button id="cityOpen" class="ml-2 d-none d-md-inline btn-orange">Выбрать</button>
+                </div>
+                <div class="position-relative">
+                    <ul class="city__dropdown" style="display: none">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="city__content">
+                <div class="city__default"></div>
+                <div class="city__collection">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <ul class="city__collection-b">
+                                <li>Москва и МО</li>
+                                <li>Санкт-Петербург и ЛО</li>
+                                <li>Екатеринбург</li>
+                                <li>Краснодар</li>
+                                <li>Новосибирск</li>
+                                <li>Красноярск</li>
+                                <li>Челябинск</li>
+                                <li>Ростов-на-Дону</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul class="city__collection-b">
+                                <li>Тюмень</li>
+                                <li>Уфа</li>
+                                <li>Казань</li>
+                                <li>Пермь</li>
+                                <li>Нижний Новгород</li>
+                                <li>Самара</li>
+                                <li>Саратов</li>
+                                <li>Омск</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul class="city__collection-b">
+                                <li>Балашиха</li>
+                                <li>Волгоград</li>
+                                <li>Воронеж</li>
+                                <li>Иркутск</li>
+                                <li>Хабаровск</li>
+                                <li>Томск</li>
+                                <li>Ярославль</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li>Сочи</li>
+                                <li>Сургут</li>
+                                <li>Подольск</li>
+                                <li>Мытищи</li>
+                                <li>Владивосток</li>
+                                <li>Калуга</li>
+                                <li>Пятигорск</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="modal modal-define fade" style="padding-left: 0 !important; padding-right: 0 !important;" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 2rem; outline: none; padding-right: 1rem; padding-top: 5px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-info pl-sm-5 pr-sm-5 pl-2 pr-2">
+                    <div class="modal__header pt-1 header-1 text-uppercase w-100 text-center" style="font-size: 1.9em !important;">Для получения прайс листа
+                        перейдите в удобный для вас
+                        мессенджер :</div>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <!--                            <div class="modal__desc text-center">-->
+                            <!--                                Для получения прайс листа-->
+                            <!--                                перейдите в удобный для вас-->
+                            <!--                                мессенджер :-->
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                    <div class="modal__social pt-4 pb-4 text-center">
+                        <a class="pr-1 text-decoration-none" target="_blank" href="http://t.me/RIODOM">
+                            <img src="img/modal__telegram.png" alt="">
+                        </a>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=79270809042">
+                            <img src="img/modal__whatsapp.png" alt="">
+                        </a>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-10 offset-1">
+                            <div class="modal__desc text-center text-uppercase">
+                                или же введите номер телефона для получения
+                                прайса в любом удобном для вас мессенджере
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <form action="" method="post">
+                                <div class="modal__form-group mb-3 text-center">
+                                    <label class="modal__desc" for="modal-name">ИМЯ</label>
+                                    <input id="modal-name" name="name" type="text">
+                                </div>
+                                <div class="modal__form-group mb-4 text-center">
+                                    <label class="modal__desc" for="modal-phone">ТЕЛЕФОН</label>
+                                    <input class="phone" name="phone" id="modal-phone" type="text">
+                                </div>
+                                <div class="text-center pt-2 mb-3">
+                                    <button type="button" class="intro__btn" onclick="sendModal()">ПЕРЕЗВОНИТЕ МНЕ</button>
+                                </div>
+                                <input type="hidden" name="city" class="city" value="Москва и МО">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-success">
+                    <img src="img/logo-green.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

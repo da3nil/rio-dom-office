@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Useful meta tags -->
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="Хотите жить в квартире с уникальным интерьером? Дизайн-проект – это возможность получить уникальный интерьер от именитых дизайнеров. Ваши желания в точности реализуются любой профессиональной бригадой благодаря детальным планам, макетам и подробным инструкциям."
+          name="description">
+    <meta content="Ремонт, Утепление, Квартира, Офис, Отзывы, Услуги" name="keywords">
+    <meta content="index, follow" name="robots">
+    <meta content="index, follow" name="googlebot">
+    <meta content="notranslate" name="google">
+    
+    <link href="css/main.min.css" rel="stylesheet"/>
+    
+    <title>Rio-Dom.ru - современный ремонт квартир</title>
+</head>
+<body>
+<div class="modal modal-define fade" style="padding-left: 0 !important; padding-right: 0 !important;" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 2rem; outline: none; padding-right: 1rem; padding-top: 5px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-info pl-sm-5 pr-sm-5 pl-2 pr-2">
+                    <div class="modal__header pt-1 header-1 text-uppercase w-100 text-center" style="font-size: 1.9em !important;">Для получения прайс листа
+                        перейдите в удобный для вас
+                        мессенджер :</div>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <!--                            <div class="modal__desc text-center">-->
+                            <!--                                Для получения прайс листа-->
+                            <!--                                перейдите в удобный для вас-->
+                            <!--                                мессенджер :-->
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                    <div class="modal__social pt-4 pb-4 text-center">
+                        <a class="pr-1 text-decoration-none" target="_blank" href="http://t.me/RIODOM">
+                            <img src="img/modal__telegram.png" alt="">
+                        </a>
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=79270809042">
+                            <img src="img/modal__whatsapp.png" alt="">
+                        </a>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-10 offset-1">
+                            <div class="modal__desc text-center text-uppercase">
+                                или же введите номер телефона для получения
+                                прайса в любом удобном для вас мессенджере
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <form action="" method="post">
+                                <div class="modal__form-group mb-3 text-center">
+                                    <label class="modal__desc" for="modal-name">ИМЯ</label>
+                                    <input id="modal-name" name="name" type="text">
+                                </div>
+                                <div class="modal__form-group mb-4 text-center">
+                                    <label class="modal__desc" for="modal-phone">ТЕЛЕФОН</label>
+                                    <input class="phone" name="phone" id="modal-phone" type="text">
+                                </div>
+                                <div class="text-center pt-2 mb-3">
+                                    <button type="button" class="intro__btn" onclick="sendModal()">ПЕРЕЗВОНИТЕ МНЕ</button>
+                                </div>
+                                <input type="hidden" name="city" class="city" value="Москва и МО">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-success">
+                    <img src="img/logo-green.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 2rem; outline: none; padding-right: 2rem; padding-top: 20px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="city__header">
+                <div class="modal-title position-relative">
+                    <label class="d-block city__title text-left text-md-center" for="city__input-text">Выберите регион <span class="d-none d-md-inline">или город</span></label>
+                </div>
+                <div class="city__input-group justify-content-start justify-content-md-between position-relative">
+                    <input value="Москва и МО" name="city" id="city__input-text" class="city__input-text" type="text" placeholder="Выберите регион или город" autocomplete="off">
+                    <button id="cityOpen" class="ml-2 d-none d-md-inline btn-orange">Выбрать</button>
+                </div>
+                <div class="position-relative">
+                    <ul class="city__dropdown" style="display: none">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="city__content">
+                <div class="city__default"></div>
+                <div class="city__collection">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <ul class="city__collection-b">
+                                <li>Москва и МО</li>
+                                <li>Санкт-Петербург и ЛО</li>
+                                <li>Екатеринбург</li>
+                                <li>Краснодар</li>
+                                <li>Новосибирск</li>
+                                <li>Красноярск</li>
+                                <li>Челябинск</li>
+                                <li>Ростов-на-Дону</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul class="city__collection-b">
+                                <li>Тюмень</li>
+                                <li>Уфа</li>
+                                <li>Казань</li>
+                                <li>Пермь</li>
+                                <li>Нижний Новгород</li>
+                                <li>Самара</li>
+                                <li>Саратов</li>
+                                <li>Омск</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul class="city__collection-b">
+                                <li>Балашиха</li>
+                                <li>Волгоград</li>
+                                <li>Воронеж</li>
+                                <li>Иркутск</li>
+                                <li>Хабаровск</li>
+                                <li>Томск</li>
+                                <li>Ярославль</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li>Сочи</li>
+                                <li>Сургут</li>
+                                <li>Подольск</li>
+                                <li>Мытищи</li>
+                                <li>Владивосток</li>
+                                <li>Калуга</li>
+                                <li>Пятигорск</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input id="cityCore" type="hidden" name="city" class="city" value="Москва и МО">
+
+<style>
+    .intro__item {
+        color: white;
+    }
+
+    .intro__center a:hover {
+        text-decoration: none !important;
+        text-transform: none !important;
+        color: #ffd227 !important;
+        transition: color 0.5s;
+    }
+
+    .intro__center a:hover .intro__item{
+        color: #ffd227 !important;
+        transition: color 0.5s;
+    }
+</style>
+
+<section class="intro">
+    <div class="intro__container text-center text-white">
+<!--        <h1 class="intro__header text-orange-lg text-white text-center w-100">Интро <br> (Жду макет)</h1>-->
+        <div class="intro__head">
+<!--        <div class="intro__head position-fixed sticky-top" style="padding-top: 15px;padding-bottom: 9px;width: 100%;background-color: rgba(0,0,0,0.7);">-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 col">
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="logo mb-md-3 mb-lg-0 p-3 pt-3 p-md-0">
+                                    <img style="position: relative;top: 0.6rem;" class="img-fluid" src="img/logo-white.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg pt-3 pb-3 pt-lg-0 pb-lg-0 d-flex justify-content-center text-center">
+                                <div class="intro__city-container">
+                                    <div style="cursor: pointer" data-toggle="modal" data-target="#cityModal" class="intro__city-head text-center">
+                                        <img src="img/map-marker-alt-solid.svg" alt="" style="height: 16px; width: auto; position: relative; top: -2px">
+                                        <span id="intro__city-data">Москва и МО</span>
+                                    </div>
+                                    <div data-toggle="modal" data-target="#cityModal" class="intro__city-bottom text-center" style="cursor: pointer; font-size: calc(16px + 0.1vw); text-decoration: underline">
+                                        Выбрать другой
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg d-none d-lg-block text-decoration-none">
+                                <a href="#calc" class="intro__calc flowing-scroll" data-scroll=".calc" style="white-space: nowrap">
+                                    <img class="intro__calc-img" src="img/calc-white.png" alt="">
+                                    <span class="intro__calc-text text-decoration-none">Калькулятор</span>
+                                </a>
+                            </div>
+                            <div class="col-lg d-none d-lg-block">
+                                Задайте вопрос напрямую в :
+                                <a target="_blank" href="http://t.me/RIODOM">
+                                    <img class="intro__messenger" src="img/intro__telegram.png" alt="">
+                                </a>
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=79270809042">
+                                    <img class="intro__messenger" src="img/intro__whatsapp.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-lg d-none d-lg-block text-right">
+                                <div class="pr-3">
+                                    <div class="intro__phone position-relative"><a class="text-decoration-none text-white" href="tel:+78005509042">8 (800) 550 90-42</a> <img class="intro__phone-indicator" src="img/intro__phone-i.png" alt=""></div>
+                                    <div>Бесплатный звонок</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro__center">
+<!--            <img class="img-fluid" src="img/joke.png" alt="">-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 mt-3 mt-md-0 col-6 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                <div class="intro__item">
+                                    СОВРЕМЕННЫЙ <br> РЕМОНТ <br> КВАРТИР
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 order-first order-md-1 position-relative">
+                                <div class="pulse-container pulse" style="pointer-events: none"></div>
+                                <div class="intro__title-top">СОВРЕМЕННЫЙ</div>
+                                <div class="intro__title position-relative">
+                                    <div>РЕМОНТ</div>
+                                    <div class="intro__light"></div>
+                                    <div class="intro__text-min">КОММЕРЧЕСКОЙ</div>
+                                    <div class="intro__text-min">НЕДВИЖИМОСТИ</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mt-3 mt-md-0 order-last col-6 d-flex align-items-center justify-content-center justify-content-lg-start">
+                                <a href="https://rio-dom.ru/balcony">
+                                    <div class="intro__item text-decoration-none">
+                                        УТЕПЛЕНИЕ <br>ЛОДЖИИ И <br>БАЛКОНОВ
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="intro__btn-container">
+                            <button class="intro__btn" data-toggle="modal" data-target="#exampleModal">НАШИ ЦЕНЫ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<div class="break">-->
+<!--    <div class="break__image">-->
+<!--        <img src="img/gallery__before.png" class="img-fluid" alt="">-->
+<!--    </div>-->
+<!--</div>-->
+
+<section class="gallery">
+    <div class="gallery__container position-relative screen">
+        <div class="gallery__background"></div>
+        <div style="top: 0; bottom: 0; right: 0; left: 0;" class="gallery__background-container position-absolute">
+            <img class="gallery__slide" src="img/back_galereya.jpg" alt="">
+<!--            <div class="w-100 h-100 swiper-container-2 swiper-container-initialized swiper-container-horizontal">-->
+<!--&lt;!&ndash;                <div class="swiper-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <div class="swiper-slide" data-swiper-autoplay="2000">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                        <img class="gallery__slide" src="img/gg1.png" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <div class="swiper-slide" data-swiper-autoplay="2000">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                        <img class="gallery__slide" src="img/gg2.png" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <div class="swiper-slide" data-swiper-autoplay="2000">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                        <img class="gallery__slide" src="img/gg3.png" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <div class="swiper-slide" data-swiper-autoplay="2000">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                        <img class="gallery__slide" src="img/gg4.png" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <div class="swiper-slide" data-swiper-autoplay="2000">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                        <img class="gallery__slide" src="img/gg5.png" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <div class="swiper-slide" data-swiper-autoplay="2000">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                        <img class="gallery__slide" src="img/gg6.png" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+        </div>
+<!--        <div class="gallery__gradient"></div>-->
+        <div class="gallery__inner text-center text-md-left">
+            <div class="container" style="z-index: 1000">
+                <div class="row">
+                    <div class="offset-md-1 col-md-5">
+                        <div class="gallery__header header-1 pb-4 text-uppercase text-orange">Ремонт - значит прибыль</div>
+                        <div class="gallery__text pl-4 pr-4 pl-md-0 pr-md-0 pb-4">
+                            Стремитесь к уменьшению расходов на содержание недвижимости?
+                        </div>
+                        <div class="gallery__text pl-4 pr-4 pl-md-0 pr-md-0 pb-4">
+                            Перепланировка и ремонт помогут максимально использовать всю полезную площадь и получать дополнительную прибыль независимо от того, собираетесь ли вы реализовывать личные проекты, сдавать помещения в аренду или готовите их к продаже. А индивидуальный дизайн-проект выгодно выделит вас среди конкурентов и привлечет клиентов.
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 d-flex align-items-center">
+                        <div class="d-none d-md-block gallery__swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll1.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll2.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll3.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll4.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll5.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll6.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll7.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll8.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="img/gll9.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev" style="color: #000000; outline: none !important;"></div>
+                            <div class="swiper-button-next" style="color: #000000; outline: none !important;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 pb-5">
+                        <div class="text-center text-nowrap">
+                            <a target="_blank" href="https://vk.com/album-132592573_277810815" class="d-inline-block text-decoration-none btn-orange support__btn text-white" style="font-size: 1em; padding: 0.5rem">ОТКРЫТЬ ГАЛЕРЕЮ</a>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="row">-->
+<!--                    <div class="offset-md-1 col-md-6 d-none d-md-block">-->
+<!--&lt;!&ndash;                        <div class="gallery__toggle text-uppercase">Смотреть до / после</div>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                    <div class="col-md-4">-->
+<!--&lt;!&ndash;                        <div class="gallery__slider pl-4 pr-4 pl-md-0 pr-md-0">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="gallery__indicators align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="gallery__indicators swiper-pagination-2"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                                <div class="indicators__item indicators__item_active"></div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                                <div class="indicators__item"></div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                                <div class="indicators__item"></div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                                <div class="indicators__item"></div>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;                                <div class="indicators__line"></div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                                <a id="gallery-next" class="gallery__down-arrow">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                                    <img class="img-fluid" src="img/gallery__down-arrow.png" alt="">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                                </a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+<!--        <div class="gallery__house d-none d-md-block">-->
+<!--            <img src="img/gallery__house.png" alt="">-->
+<!--        </div>-->
+    </div>
+</section>
+
+<!--<div class="break">-->
+<!--    <div class="break__image">-->
+<!--        <img class="img-fluid" src="img/gallery__after.png" alt="">-->
+<!--    </div>-->
+<!--</div>-->
+
+<section id="calc" class="calc">
+    <div class="calc__container">
+        <div class="container modal-info" style="padding-top: 6em">
+            <div class="row">
+                <div class="offset-md-1 col-md-10">
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <div class="row">
+                                <div class="col-7 col-md-12">
+                                    <div class="calc__header text-md-center text-uppercase text-dark header-1">
+                                        калькулятор
+                                    </div>
+                                    <div class="calc__description text-md-center text-uppercase">РАССЧИТАТЬ СТОИМОСТЬ
+                                        РЕМОНТА В НЕСКОЛЬКО КЛИКОВ
+                                    </div>
+                                </div>
+                                <div class="col-5 d-block d-md-none text-center">
+                                    <img alt="" class="position-relative img-fluid"
+                                         src="img/calc__folder-mobile.png">
+                                    <div class="d-block d-md-none position-relative">
+                                        <div class="calc__folder-text" style="justify-content: center; width: 100%; font-size: 1.1em; left: -10px; top: auto; bottom: -5px; right: 0; transform: none !important;">
+                                            <span class="calc__folder-value">100.000</span>
+                                            <span class="calc__folder-last">РУБЛЕЙ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Версия для телефонов -->
+                    <div class="calc__mobile mt-3 d-block d-md-none">
+                        <div class="calc__swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="calc__item">
+                                        <div class="item__header text-uppercase header-2">Тип помещения</div>
+                                        <div class="item__content d-flex">
+                                            <div class="mr-3">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="100000"
+                                                           id="customRadio1-p" name="type" type="radio" value="kv">
+                                                    <label class="custom-control-label"
+                                                           for="customRadio1-p">КВАРТИРА</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="110000" id="customRadio-p"
+                                                           name="type" type="radio" value="rest">
+                                                    <label class="custom-control-label"
+                                                           for="customRadio-p">РЕСТОРАН</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="120000" id="customRadio3-p"
+                                                           name="type" type="radio" value="shop">
+                                                    <label class="custom-control-label"
+                                                           for="customRadio3-p">МАГАЗИН</label>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="130000" id="customRadio4-p"
+                                                           name="type" type="radio" value="storage">
+                                                    <label class="custom-control-label"
+                                                           for="customRadio4-p">СКЛАД</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="140000" id="customRadio5-p"
+                                                           name="type" type="radio" value="office">
+                                                    <label class="custom-control-label"
+                                                           for="customRadio5-p">ОФИС</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="150000" id="customRadio6-p"
+                                                           name="type" type="radio" value="house">
+                                                    <label class="custom-control-label" for="customRadio6-p">ДОМ</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="calc__item">
+                                        <div class="item__header text-uppercase header-2">Вид ремонта</div>
+                                        <div class="item__content">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" data-price="10000" id="customRadio7-p"
+                                                       name="repairs" type="radio" value="cosmetic">
+                                                <label class="custom-control-label"
+                                                       for="customRadio7-p">КОСМЕТИЧЕСКИЙ</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" data-price="21000" id="customRadio8-p"
+                                                       name="repairs" type="radio" value="designer">
+                                                <label class="custom-control-label"
+                                                       for="customRadio8-p">ДИЗАЙНЕРСКИЙ</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" data-price="22000" id="customRadio9-p"
+                                                       name="repairs" type="radio" value="capital">
+                                                <label class="custom-control-label"
+                                                       for="customRadio9-p">КАПИТАЛЬНЫЙ</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" data-price="43000"
+                                                       id="customRadio10-p" name="repairs" type="radio" value="full">
+                                                <label class="custom-control-label" for="customRadio10-p">ПОД
+                                                    КЛЮЧ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="calc__item">
+                                        <div class="item__header text-uppercase header-2">Перепланировка</div>
+                                        <div class="item__content row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="32000"
+                                                           id="customRadio13-p" name="redevelopment" type="radio"
+                                                           value="1">
+                                                    <label class="custom-control-label" for="customRadio13-p">ДА</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="13000" id="customRadio14-p"
+                                                           name="redevelopment" type="radio" value="0">
+                                                    <label class="custom-control-label"
+                                                           for="customRadio14-p">НЕТ</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="calc__item">
+                                        <div class="item__header text-uppercase header-2">Выравнивание стен</div>
+                                        <div class="item__content row">
+                                            <div class="col-6">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="24000"
+                                                           id="customRadio15-p" name="alignment" type="radio"
+                                                           value="1">
+                                                    <label class="custom-control-label" for="customRadio15-p">ДА</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" data-price="15000" id="customRadio16-p"
+                                                           name="alignment" type="radio" value="0">
+                                                    <label class="custom-control-label"
+                                                           for="customRadio16-p">НЕТ</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="calc__item">
+                                        <label class="item__header header-2 text-uppercase">
+                                            кол-во комнат
+                                            <input class="calc__input-text" name="rooms" type="number">
+                                        </label>
+                                        <label class="item__header header-2 text-uppercase">
+                                            площадь помещения
+                                            <input class="calc__input-text calc__end" name="area" type="number" step="50">
+                                            <span style="text-transform: lowercase">м<sup>2</sup></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button mt-3">
+                                <button class="calc__btn-slide calc__btn-prev">Назад</button>
+                                <button class="calc__btn-slide calc__btn-next">
+                                    <img class="img-fluid" src="img/calc__btn-down-arrow.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Версия для ПК -->
+                    <div class="calc__pc row mt-4 d-none d-md-flex">
+                        <div class="col-lg-3 col-md-4 col-6 mt-5 pt-1">
+                            <div class="calc__item" style="opacity: 1">
+                                <div class="item__header text-uppercase header-2">Тип помещения</div>
+                                <div class="item__content d-flex">
+                                    <div class="mr-4">
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" data-price="100000" id="customRadio1"
+                                                   name="type" type="radio" value="kv">
+                                            <label class="custom-control-label" for="customRadio1">КВАРТИРА</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" data-price="110000" id="customRadio" name="type"
+                                                   type="radio" value="rest">
+                                            <label class="custom-control-label" for="customRadio">РЕСТОРАН</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" data-price="120000" id="customRadio3" name="type"
+                                                   type="radio" value="shop">
+                                            <label class="custom-control-label" for="customRadio3">МАГАЗИН</label>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" data-price="130000" id="customRadio4" name="type"
+                                                   type="radio" value="storage">
+                                            <label class="custom-control-label" for="customRadio4">СКЛАД</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" data-price="140000" id="customRadio5" name="type"
+                                                   type="radio" value="office">
+                                            <label class="custom-control-label" for="customRadio5">ОФИС</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" data-price="150000" id="customRadio6" name="type"
+                                                   type="radio" value="house">
+                                            <label class="custom-control-label" for="customRadio6">ДОМ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 d-lg-block mt-5 d-none">
+                            <div class="calc__next-info"></div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6 mt-5 pt-1">
+                            <div class="calc__item">
+                                <div class="item__header text-uppercase header-2">Вид ремонта</div>
+                                <div class="item__content">
+                                    <div class="custom-control custom-radio">
+                                        <input disabled class="custom-control-input" data-price="10000" id="customRadio7" name="repairs"
+                                               type="radio" value="cosmetic">
+                                        <label class="custom-control-label" for="customRadio7">КОСМЕТИЧЕСКИЙ</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input disabled class="custom-control-input" data-price="21000" id="customRadio8" name="repairs"
+                                               type="radio" value="designer">
+                                        <label class="custom-control-label" for="customRadio8">ДИЗАЙНЕРСКИЙ</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input disabled class="custom-control-input" data-price="22000" id="customRadio9" name="repairs"
+                                               type="radio" value="capital">
+                                        <label class="custom-control-label" for="customRadio9">КАПИТАЛЬНЫЙ</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input disabled class="custom-control-input" data-price="43000" id="customRadio10"
+                                               name="repairs" type="radio" value="full">
+                                        <label class="custom-control-label" for="customRadio10">ПОД КЛЮЧ</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 d-lg-block mt-5 d-none">
+                            <div class="calc__next-info" style="position: relative; left: -30px"></div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6 mt-5 pt-1">
+                            <div class="calc__item">
+                                <label class="item__header header-2 text-uppercase text-nowrap">
+                                    площадь помещения
+                                    <input disabled class="calc__input-text calc__end" name="area" type="number" step="50">
+                                    <span style="text-transform: lowercase">м<sup>2</sup></span>
+                                </label>
+                                <label class="item__header header-2 text-uppercase text-nowrap">
+                                    кол-во комнат
+                                    <input disabled class="calc__input-text" name="rooms" type="number">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 mt-5 d-none">
+                            <div class="calc__next-info"></div>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-6 mt-5 pt-1">
+                            <div class="calc__item">
+                                <div class="item__header text-uppercase header-2">Перепланировка</div>
+                                <div class="item__content d-flex">
+                                    <div class="mr-4">
+                                        <div class="custom-control custom-radio">
+                                            <input disabled class="custom-control-input" data-price="32000"
+                                                   id="customRadio13" name="redevelopment" type="radio" value="1">
+                                            <label class="custom-control-label" for="customRadio13">ДА</label>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="custom-control custom-radio">
+                                            <input disabled class="custom-control-input" data-price="13000" id="customRadio14"
+                                                   name="redevelopment" type="radio" value="0">
+                                            <label class="custom-control-label" for="customRadio14">НЕТ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 d-lg-block mt-5 d-none">
+                            <div class="calc__next-info"></div>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-6 mt-5 pt-1">
+                            <div class="calc__item calc__trigger">
+                                <div class="item__header text-uppercase header-2">Выравнивание стен</div>
+                                <div class="item__content d-flex">
+                                    <div class="mr-4">
+                                        <div class="custom-control custom-radio">
+                                            <input disabled class="custom-control-input" data-price="24000" id="customRadio15"
+                                                   name="alignment" type="radio" value="1">
+                                            <label class="custom-control-label" for="customRadio15">ДА</label>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="custom-control custom-radio">
+                                            <input disabled class="custom-control-input" data-price="15000" id="customRadio16" name="alignment"
+                                                   type="radio" value="0">
+                                            <label class="custom-control-label" for="customRadio16">НЕТ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 d-lg-block mt-5 d-none">
+                            <div class="calc__next-info" style="position: relative; left: -30px"></div>
+                        </div>
+                        <div class="col-md-4 col-6 mt-5 pt-1 d-none d-md-block">
+                            <div class="calc__folder-container-pc">
+                                <div class="calc__folder">
+                                    <img alt="" src="img/calc__book.png">
+                                    <div class="calc__folder-text">
+                                        <span class="calc__folder-value">100.000</span>
+                                        <span class="calc__folder-last">РУБЛЕЙ</span>
+                                    </div>
+                                    <!--                                    <div class="calc__stick"></div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-animate1" style="display: none; transition: all 1s">
+                <div class="row text-center mt-5 mb-5 form-animate fadeInUp" >
+                    <div class="col-md-10 offset-md-1">
+                        <div class="row">
+                            <div class="col-md-6 pl-md-0 pb-3 pb-md-0 pr-md-0">
+                                <input autocomplete="off" class="phone text-center calc__input-number" placeholder="НОМЕР ТЕЛЕФОНА"
+                                       type="text">
+                            </div>
+                            <div class="col-md-6 pb-3 pb-md-0 pl-md-0">
+                                <!--                           data-toggle="modal" data-target="#exampleModal"  ?-->
+                                <button class="h-100 btn-orange calc__btn text-uppercase w-100" onclick="sendCalc()">получить расчет по смс</button>
+                            </div>
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6 pt-md-3">
+                                <div class="text-center calc__usloviya">
+                                    я принимаю условия <br>
+                                    <span style="text-decoration: underline">пользовательского соглашения</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-success">
+            <img src="img/logo-green.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="include-price" style="position: relative; z-index: 100; margin-top: -3rem">
+    <div class="include-price__container">
+        <div class="include-price__inner">
+            <div class="w-100">
+                <div class="include-price__title">
+                    <span class="d-block d-md-inline">Что входит</span>
+                    <span class="d-block d-md-inline">в стоимость?</span>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="offset-1 col-md-10">
+                            <div class="row">
+                                <div class="col-md d-flex align-content-center">
+                                    <div class="include-price__item">
+                                        <div class="include-price__header header-2">Подготовительный этап</div>
+                                        <div class="include-price__content">
+                                            <ul class="pl-0">
+                                                <li>Дизайн проект Вашего помещения</li>
+                                                <li>Подбор материалов</li>
+                                                <li>Разработка планировочного решения</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md d-flex align-content-center">
+                                    <div class="include-price__item">
+                                        <div class="include-price__header header-2">Основной этап</div>
+                                        <div class="include-price__content">
+                                            <ul class="pl-0">
+                                                <li>Демонтаж существующей отделки</li>
+                                                <li>Ремонтные работы полного цикла</li>
+                                                <li>Возведение стен (при необходимости)</li>
+                                                <li>Перепланировка по требованию</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md d-flex align-content-center">
+                                    <div class="include-price__item">
+                                        <div class="include-price__header header-2">Заключительный этап</div>
+                                        <div class="include-price__content">
+                                            <div class="pl-0">
+                                                Подбор мебели под интерьер и разработка арт-объектов, если этого требует дизайн-проект
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="include-price__house d-none d-md-block">
+            <img src="img/include-price__house-after.png" alt="">
+        </div>
+    </div>
+</section>
+
+<!--//= template/reviews.html-->
+
+<!--//= template/services.html-->
+
+<section class="support">
+    <div class="support__container" id="support-l">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form action="" method="post">
+                        <div class="support__inner" style="padding: 2em 1.5em 8em;">
+                            <div class="modal-info">
+                                <div class="support__header">
+                                    Заказать обратный звонок для консультации
+                                </div>
+                                <div class="support__city mt-2">
+                                    <span class="d-inline">Ваш город:</span>
+                                    <span class="support__select" style="cursor: pointer" data-toggle="modal" data-target="#cityModal">МОСКВА И МО</span>
+                                    <input id="city__input" name="city" value="МОСКВА И МО" type="hidden">
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input class="support__input" id="support-name" type="text" name="name" placeholder="имя">
+                                </div>
+                                <div class="form-group">
+                                    <input class="support__input phone"  id="support-phone" type="text" name="phone" placeholder="номер телефона">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn-orange support__btn w-100" onclick="supportSend()" style="border-radius: 15px">
+                                        ОТПРАВИТЬ ЗАЯВКУ
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="modal-success" style="bottom: auto; top: 2rem; padding: 0 2rem">
+                                <img src="img/logo-green.png" alt="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer position-relative text-center text-md-left">
+    <div class="footer__table-container">
+        <div class="footer__table"></div>
+    </div>
+    <div class="footer__container">
+        <div class="container">
+            <div class="col-md-10 offset-md-1">
+                <div class="footer__items row">
+                    <div class="col-md order-md-0">
+                        <div class="footer__head mt-5 mt-md-0 header-2">Навигация</div>
+                        <div class="footer__content footer__content-one">
+                            <ul class="list-unstyled">
+                                <li class="text-white"><a href="#services" class="text-white animate-l">Наши услуги</a></li>
+                                <li class="text-white"><a href="#support-l" class="text-white animate-l">Заказать обратный звонок</a></li>
+                                <li class="text-white"><a href="#calc" class="text-white animate-l">Калькулятор</a></li>
+                                <li class="text-white">
+                                    <a target="_blank" href="https://vk.com/remont.inc_ufa" class="d-flex text-white align-items-center justify-content-center justify-content-md-start">
+                                        <img style="padding-right: 4px;height: 20px;" class="img-fluid" src="img/vk-logo.png" alt="">
+                                        <strong>VK.COM</strong>
+                                    </a>
+                                </li>
+                                <li class="text-white">
+                                    <a target="_blank" href="https://www.instagram.com/ooo_rio_dom/?igshid=1ounr0cuqyykd" class="text-white d-flex align-items-center justify-content-center justify-content-md-start">
+                                        <img style="padding-right: 4px;height: 18px;" class="img-fluid" src="img/inst.png" alt="">
+                                        <strong>INSTAGRAM.COM</strong>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md order-md-0">
+                        <div class="footer__head mt-5 mt-md-0 header-2">НАШИ УСЛУГИ</div>
+                        <div class="footer__content footer__content-one">
+                            <ul class="list-unstyled">
+                                <li>Ремонт офисов</li>
+                                <li>ремонт квартир</li>
+                                <li>дизайн интерьера</li>
+                                <li>ремонт торговых помещений</li>
+                                <li>Утепление балконов и лоджии</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md order-first order-md-1">
+                        <div class="footer__head mt-5 mt-md-0 text-md-center">
+                            <img src="img/logo.png" alt="Логотип" class="img-fluid">
+                        </div>
+                        <div class="footer__content">
+                            <div>если у вас есть вопросы, будем
+                                рады на них ответить:</div>
+                            <ul class="list-unstyled">
+                                <li class="font-weight-bold">
+                                    <a class="font-weight-bold text-white" href="tel:+78005509042">8 (800) 550 90-42</a>
+                                </li>
+                                <li class="footer__whatsapp">
+                                    <a target="_blank" target="_blank" href="https://api.whatsapp.com/send?phone=79270809042">
+                                        <img class="img-fluid" src="img/whatsapp.png" alt="">
+                                        whatsapp
+                                    </a>
+                                </li>
+                                <li class="footer__viber">
+                                    <a target="_blank" href="viber://chat?number=%2B79270809042">
+                                        <img src="img/viber.png" alt="">
+                                        viber
+                                    </a>
+                                </li>
+                                <li class="footer__telegram">
+                                    <a target="_blank" href="http://t.me/RIODOM">
+                                        <img src="img/telegram.png" alt="">
+                                        telegram
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md order-last">
+                        <div class="footer__head mt-5 mt-md-0 header-2 text-nowrap">ULEU : <br class="d-none d-md-block d-lg-none">Лаборатория маркетинга</div>
+                        <div class="footer__content">
+                            <div class="mb-2">
+                                разработка и поддержка сайта на протяжении всего сотрудничества
+                            </div>
+                            <div class="mb-2">
+                                2019 - 2020 @ uleu
+                            </div>
+                            <div class="mb-2">
+                                agecy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__background-big">
+
+    </div>
+</footer>
+<script defer src="js/main.min.js"></script>
+</body>
+</html>
