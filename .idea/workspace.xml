@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c1d52c-ce1c-49d6-a265-29a0a1055d93" name="Default Changelist" comment="" />
+    <list default="true" id="e0c1d52c-ce1c-49d6-a265-29a0a1055d93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/public_html.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/public_html.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/intro__background-office.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/intro__background-office.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/support__background-office.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/support__background-office.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/table-full-office.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/table-full-office.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/table-mini-office.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/table-mini-office.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/my.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/my.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/gallery.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +23,11 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jufjjgDDSntXDHcwkxgwsT1eXp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,11 +47,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604659033614</updated>
-      <workItem from="1604659034654" duration="7974000" />
+      <workItem from="1604659034654" duration="8274000" />
+      <workItem from="1604756201538" duration="45000" />
+      <workItem from="1606155848776" duration="707000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="466" y="155" key="FileChooserDialogImpl" timestamp="1604756243987">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="466" y="155" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1604756243987" />
   </component>
 </project>
